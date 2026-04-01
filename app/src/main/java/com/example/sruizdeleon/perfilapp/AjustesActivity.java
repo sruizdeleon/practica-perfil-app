@@ -54,13 +54,19 @@ public class AjustesActivity extends AppCompatActivity {
             }
         });
 
+        // Inicializamos el valor por defecto
+        int valorInicial = 16;
+        String textoFormateado = getString(R.string.tamano_texto, valorInicial);
+        binding.tvTamanoTexto.setText(textoFormateado);
+
         // Seekbar para cambio de tamaño de texto
         binding.sbTamano.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 // Como pediste un mínimo de 12, nos aseguramos aquí
                 int valorReal = Math.max(progress, 12);
-                binding.tvTamanoTexto.setText("Tamaño de texto: " + valorReal + "sp");
+                String textoFormateado = getString(R.string.tamano_texto, valorReal);
+                binding.tvTamanoTexto.setText(textoFormateado);
             }
 
             @Override public void onStartTrackingTouch(SeekBar seekBar) {}

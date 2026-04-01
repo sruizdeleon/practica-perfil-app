@@ -25,6 +25,6 @@
     <string name="sw_notificaciones">Notificaciones</string>
     <string name="sw_modo_oscuro">Modo Oscuro</string>
     <string name="cb_recordar">Recordar sesión</string>
-    <string name="tamano_texto">Tamaño de texto: %1$dsp</string>
+    <string name="tamano_texto">Tamaño de texto: %1$d</string>
     <string name="btn_guardar">Guardar y volver</string>
 </resources>
