@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".PerfilActivity">
+
+    <!-- Text Perfil -->
+    <TextView
+        android:id="@+id/tvTituloPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_perfil"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Imagen Avatar -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
+        android:padding="2dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp"
+        app:shapeAppearanceOverlay="@style/CircleImage"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloPerfil"
+        app:layout_constraintWidth_percent="0.3"
+        android:src="@drawable/avatar_custom" />
+
+
+    <!-- Text Nombre -->
+    <TextView
+    android:id="@+id/tvResultadoNombre"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:text="@string/label_nombre"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <!-- Text Edad -->
+    <TextView
+        android:id="@+id/tvResultadoEdad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/label_edad"
+        android:textColor="@color/tx_secundary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultadoNombre" />
+
+    <LinearLayout
+        android:id="@+id/llCardEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultadoEdad">
+
+        <!-- Icono -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+
+        <!-- Text Email -->
+        <TextView
+            android:id="@+id/tvResultadoEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_email"
+            android:textColor="@color/tx_secundary"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCardEntrenamiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/llCardEmail">
+
+        <!-- Icono -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@android:drawable/ic_dialog_info" />
+
+        <!-- Text Entrenamiento -->
+        <TextView
+            android:id="@+id/tvResultadoEntrenamiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_hobby"
+            android:textColor="@color/tx_secundary"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Botón Ajustes   -->
+    <Button
+        android:id="@+id/btnAjustes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/btn"
+        android:text="@string/btn_ajustes"
+        app:layout_constraintEnd_toStartOf="@+id/btnVolver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llCardEntrenamiento"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+    <!--  Botón Volver  -->
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/btn"
+        android:text="@string/btn_volver"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAjustes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAjustes"
+        app:layout_constraintTop_toTopOf="@+id/btnAjustes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

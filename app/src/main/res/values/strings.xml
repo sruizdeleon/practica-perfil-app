@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">PerfilApp</string>
+    <!-- Strings pantalla Main  -->
+    <string name="titulo_registro">Crea tu Perfil</string>
+    <string name="tv_nombre">Introduce tu nombre</string>
+    <string name="tv_email">Correo electrónico</string>
+    <string name="tv_edad">Edad</string>
+    <string name="label_hobby">Selecciona el tipo de entrenamiento que deseas:</string>
+    <string name="rb_deportes">Deportes</string>
+    <string name="rb_musica">Música</string>
+    <string name="rb_tecnologia">Tecnología</string>
+    <string name="btn_crear_perfil">Crear perfil</string>
+
+    <!--  Strings pantalla Perfil  -->
+    <string name="titulo_perfil">Resumen del Perfil</string>
+    <string name="label_nombre">%1$s</string>
+    <string name="label_edad">Edad: %1$s años</string>
+    <string name="label_email">Email: %1$s</string>
+    <string name="label_hobby_elegido">Hobby elegido: %1$s</string>
+    <string name="btn_ajustes">Ajustes</string>
+    <string name="btn_volver">Volver</string>
+
+    <!--  Strings pantalla Ajustes  -->
+    <string name="titulo_ajustes">Ajustes</string>
+    <string name="sw_notificaciones">Notificaciones</string>
+    <string name="sw_modo_oscuro">Modo Oscuro</string>
+    <string name="cb_recordar">Recordar sesión</string>
+    <string name="tamano_texto">Tamaño de texto: %1$dsp</string>
+    <string name="btn_guardar">Guardar y volver</string>
+</resources>
